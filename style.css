@@ -1,5 +1,9 @@
-* {
+*, h1 {
   margin: 0;
+}
+
+ul, ol {
+  padding: 0;
 }
 
 html, body {
@@ -16,6 +20,19 @@ body > header {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+body > header > h1 {
+  flex-grow: 1;
+}
+
+body > header > nav {
+  flex-grow: 4;
+}
+
+body > header > nav > ul {
+  /* list */
+  list-style-type: none;
 }
 
 body > main {
@@ -38,6 +55,18 @@ body > main > section {
   /* scrolling */
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.header-flex-config {
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+body > header > nav > ul.header-flex-config {
+  /* flexbox */
+  justify-content: space-around;
 }
 
 #sobre {
