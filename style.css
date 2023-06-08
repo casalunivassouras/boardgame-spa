@@ -50,7 +50,12 @@ body > header > nav > ul > li {
 }
 
 body > header > nav > ul > li > a {
-
+  background-color: aqua;
+  /* typography */
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: unset;
   /* flexbox */
   display: flex;
   flex-direction: row;
@@ -60,6 +65,11 @@ body > header > nav > ul > li > a {
   height: 100%;
   /* content */
   white-space: nowrap;
+}
+
+body > header > nav > ul > li > a:hover {
+  text-decoration: none;
+  color: unset;
 }
 
 body > main {
