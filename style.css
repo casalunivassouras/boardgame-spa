@@ -3,9 +3,13 @@
 }
 
 html, body {
-  overflow: hidden;
+  /* variables */
   --header-height: 50px;
   --page-padding: 15px;
+  /* scroll */
+  overflow: hidden;
+  /* typography */
+  font-family: Google Sans, arial, sans-serif;
 }
 
 body > header {
@@ -46,6 +50,7 @@ body > header > nav > ul > li {
 }
 
 body > header > nav > ul > li > a {
+
   /* flexbox */
   display: flex;
   flex-direction: row;
