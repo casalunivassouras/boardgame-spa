@@ -2,19 +2,17 @@
   margin: 0;
 }
 
-ul, ol {
-  padding: 0;
-}
-
 html, body {
   overflow: hidden;
   --header-height: 50px;
+  --page-padding: 15px;
 }
 
 body > header {
   background-color: red;
+  padding: 0 var(--page-padding);
   /* sizing */
-  width: 100%;
+  width: calc(100% - var(--page-padding) * 2);
   height: var(--header-height);
   /* positioning */
   position: fixed;
@@ -23,24 +21,48 @@ body > header {
 }
 
 body > header > h1 {
+  /* flexbox */
   flex-grow: 1;
 }
 
 body > header > nav {
-  flex-grow: 4;
+  /* sizing */
+  height: 100%;
+  /* flexbox */
+  flex-grow: 3;
 }
 
 body > header > nav > ul {
+  /* sizing */
+  height: 100%;
   /* list */
+  padding: 0;
   list-style-type: none;
+}
+
+body > header > nav > ul > li {
+  /* sizing */
+  height: 100%;
+}
+
+body > header > nav > ul > li > a {
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* sizing */
+  padding: 0 30px;
+  height: 100%;
+  /* content */
+  white-space: nowrap;
 }
 
 body > main {
   background-color: black;
+  padding: 0 var(--page-padding);
   /* positioning */
   margin-top: var(--header-height);
   /* sizing */
-  width: 100%;
   height: calc(100vh - var(--header-height));
   /* scrolling */
   overflow-y: scroll;
@@ -50,11 +72,15 @@ body > main {
 
 body > main > section {
   /* sizing */
-  width: 100%;
   height: 100%;
   /* scrolling */
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+body > header > nav > ul.header-flex-config {
+  /* flexbox */
+  justify-content: space-evenly;
 }
 
 .header-flex-config {
@@ -62,11 +88,6 @@ body > main > section {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-body > header > nav > ul.header-flex-config {
-  /* flexbox */
-  justify-content: space-around;
 }
 
 #sobre {
