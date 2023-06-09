@@ -12,6 +12,10 @@ html, body {
   font-family: Google Sans, arial, sans-serif;
 }
 
+p {
+  text-align: justify;
+}
+
 body > header {
   background-color: red;
   padding: 0 var(--page-padding);
@@ -110,10 +114,25 @@ body > header > nav > ul.header-flex-config {
   /* flexbox */
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 #sobre > article {
-  max-width: 50%;
+  max-width: 49%;
+}
+
+#sobre > article:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+#sobre > article:first-child > img {
+  margin-top: 30px;
+}
+
+#sobre > article:nth-child(2) > ul > li {
+  text-align: justify;
 }
 
 #carcassonne {
