@@ -79,7 +79,7 @@ body > header > nav > ul > li > a:hover {
 }
 
 body > main {
-  background-color: black; /*Tem que botar isso transparente*/
+  background-color: black;
   padding: 0 var(--page-padding);
   /* positioning */
   margin-top: var(--header-height);
@@ -131,6 +131,7 @@ body > header > nav > ul.header-flex-config {
 
 #sobre > article:first-child > img {
   margin-top: 30px;
+  width: 400px;
 }
 
 #sobre > article:nth-child(2) > ul {
@@ -177,4 +178,5 @@ body > header > nav > ul.header-flex-config {
 .jogo > img {
   width: 50%;
   height: auto;
+  max-width: 700px;
 }
