@@ -131,8 +131,13 @@ body > header > nav > ul.header-flex-config {
   margin-top: 30px;
 }
 
+#sobre > article:nth-child(2) > ul {
+  margin: 5%;
+}
+
 #sobre > article:nth-child(2) > ul > li {
   text-align: justify;
+  font-size: 0.9em;
 }
 
 #carcassonne {
