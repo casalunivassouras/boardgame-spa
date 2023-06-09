@@ -146,3 +146,23 @@ body > header > nav > ul.header-flex-config {
 #seven_wonders {
   background-color: goldenrod;
 }
+
+.jogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.jogo > div {
+  width: 50%;
+}
+
+.jogo > div > h2 {
+  font-size: 4em;
+}
+
+.jogo > img {
+  width: 50%;
+  height: auto;
+}
