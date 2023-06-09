@@ -16,6 +16,16 @@ p {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
 body > header {
   background-color: rgb(85, 10, 10);
   padding: 0 var(--page-padding);
@@ -30,7 +40,7 @@ body > header {
 
 body > header > h1 {
   /* flexbox */
-  flex-grow: 1;  
+  flex-grow: 1;
   color: white;
 }
 
@@ -60,8 +70,6 @@ body > header > nav > ul > li > a {
   /* typography */
   font-size: 1.1em;
   font-weight: bold;
-  text-decoration: none;
-  color: unset;
   /* flexbox */
   display: flex;
   flex-direction: row;
@@ -73,14 +81,8 @@ body > header > nav > ul > li > a {
   white-space: nowrap;
 }
 
-body > header > nav > ul > li > a:hover {
-  text-decoration: none;
-  color: unset;
-}
-
 body > main {
   background-color: black;
-  padding: 0 var(--page-padding);
   /* positioning */
   margin-top: var(--header-height);
   /* sizing */
@@ -94,6 +96,7 @@ body > main {
 body > main > section {
   /* sizing */
   height: 100%;
+  padding: 0 var(--page-padding);
   /* scrolling */
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -149,7 +152,7 @@ body > header > nav > ul.header-flex-config {
 #sobre > article:first-child {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 #sobre > article:first-child > img {
@@ -167,15 +170,15 @@ body > header > nav > ul.header-flex-config {
 }
 
 #carcassonne {
-  background-color: rgb(247, 245, 180);
+  background-color: rgb(112, 112, 238);
 }
 
 #dixit {
-  background-color: rgb(247, 245, 180);
+  background-color: rgb(252, 157, 123);
 }
 
 #seven_wonders {
-  background-color: rgb(247, 245, 180);
+  background-color: rgb(201, 168, 85);
 }
 
 .jogo {
