@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+}
+
 *, h1 {
   margin: 0;
 }
@@ -43,6 +47,7 @@ body > header {
 }
 
 body > header > h1 {
+  margin: 0;
   /* flexbox */
   flex-grow: 1;
   color: white;
@@ -165,7 +170,8 @@ body > header > nav > ul.header-flex-config {
 
 #sobre > article:first-child > img {
   margin-top: 10px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 #sobre > article:nth-child(2) > ul {
@@ -242,4 +248,78 @@ body > header > nav > ul.header-flex-config {
   width: 50%;
   height: auto;
   max-width: 700px;
+}
+
+@media only screen and (max-width: 963px) {
+  :root {
+    font-size: 15px;
+  }
+
+  html, body {
+    /* variables */
+    --header-height: 100px;
+  }
+
+  header.header-flex-config {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body > header > h1,
+  body > header > nav {
+    height: calc(var(--header-height) / 2);
+  }
+
+  body > header > h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  body > main > section {
+    min-height: 100vh;
+    height: auto;
+    padding: 40px 20px 240px 20px;
+  }
+
+  #home {
+    flex-direction: column-reverse;
+    justify-content: start;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  #home > div,
+  #home > img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #home > img {
+    margin-top: 0;
+  }
+
+  #sobre {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #sobre > article {
+    max-width: 100%
+  }
+
+  #sobre > article:nth-child(2) {
+    margin-top: calc(var(--page-padding) * 2);
+  }
+
+  .jogo {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .jogo > div,
+  .jogo > img {
+    width: 100%;
+  }
 }
