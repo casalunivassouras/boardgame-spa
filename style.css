@@ -167,6 +167,11 @@ body > header > nav > ul.header-flex-config {
   font-size: 4em;
 }
 
+.jogo > div > h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .jogo > img {
   width: 50%;
   height: auto;
