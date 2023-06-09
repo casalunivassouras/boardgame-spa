@@ -108,23 +108,6 @@ body > header > nav > ul.header-flex-config {
 
 #sobre {
   background-color: white;
-  /* flexbox */
-  display: flex;
-  flex-direction: row;
-}
-
-#sobre > article {
-  /* sizing */
-  max-width: 50%;
-}
-
-#categorias > ul {
-  /* flexbox */
-  display: flex;
-  flex-direction: row;
-  /* list */
-  padding: 0;
-  list-style-type: none;
 }
 
 #carcassonne {
