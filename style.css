@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 5px;
+}
+
 html, body {
   /* variables */
   --header-height: 50px;
@@ -115,7 +119,7 @@ body > header > nav > ul.header-flex-config {
 }
 
 #home {
-  background-color: rgb(247, 245, 180);
+  background-color: rgb(255, 254, 235);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,7 +142,11 @@ body > header > nav > ul.header-flex-config {
 
 
 #sobre {
+  --top-spacing: 15px;
+
   background-color: rgb(247, 245, 180);
+  padding-top: var(--top-spacing);
+  height: calc(100% - var(--top-spacing));
   /* flexbox */
   display: flex;
   flex-direction: row;
@@ -156,17 +164,37 @@ body > header > nav > ul.header-flex-config {
 }
 
 #sobre > article:first-child > img {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 400px;
 }
 
 #sobre > article:nth-child(2) > ul {
-  margin: 5%;
+  margin-top: 15px;
+  padding-left: 15px;
+  list-style-type: none;
 }
 
-#sobre > article:nth-child(2) > ul > li {
-  text-align: justify;
-  font-size: 0.9em;
+#sobre > article:nth-child(2) > ul > li > input,
+#sobre > article:nth-child(2) > ul > li > p {
+  display: none;
+}
+
+#sobre > article:nth-child(2) > ul > li > p {
+  margin: 5px 0 10px 10px;
+}
+
+#sobre > article:nth-child(2) > ul > li > label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sobre > article:nth-child(2) > ul > li > input:checked + label {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#sobre > article:nth-child(2) > ul > li > input:checked ~ p {
+  display: block;
 }
 
 #carcassonne {
@@ -186,6 +214,15 @@ body > header > nav > ul.header-flex-config {
   flex-direction: row;
   align-items: center;
   column-gap: 25px;
+}
+
+.jogo h1,
+.jogo h2,
+.jogo h3,
+.jogo h4,
+.jogo h5,
+.jogo h6 {
+  margin-top: 10px;
 }
 
 .jogo > div {
